@@ -46,6 +46,18 @@ module.exports = {
     return res.json(devs);
   },
 
+  async show(req, res) {
+    const { id } = req.params;
+
+    const dev = await Dev.findById(id);
+
+    if (!dev) {
+      return res.status(400).json({ error: 'Dev not found.' });
+    }
+
+    return res.json(dev);
+  },
+
   async update(req, res) {
     const { techs, latitude, longitude } = req.body;
     const { id } = req.params;
@@ -53,7 +65,7 @@ module.exports = {
     const dev = await Dev.findById(id);
 
     if (!dev) {
-      return res.status(400).json({ error: 'User not found.' });
+      return res.status(400).json({ error: 'Dev not found.' });
     }
 
     const techsArray = parseStringAsArray(techs);
@@ -64,7 +76,7 @@ module.exports = {
     };
   
     const updatedUser = await Dev.findByIdAndUpdate(id, {
-      techs,
+      techs: techsArray,
       location,
     }, { new: true });
 
@@ -77,7 +89,7 @@ module.exports = {
     const dev = await Dev.findById(id);
 
     if (!dev) {
-      return res.status(400).json({ error: 'User not found.' });
+      return res.status(400).json({ error: 'Dev not found.' });
     }
 
     try {
