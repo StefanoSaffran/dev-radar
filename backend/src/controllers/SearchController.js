@@ -8,7 +8,7 @@ module.exports = {
 
     const techsArray = parseStringAsArray(techs);
 
-    const techsRegex = techsArray.map(tech => new RegExp(tech, 'i'));
+    const techsRegex = techsArray.map(tech => new RegExp('^' + tech, 'i'));
 
     const devs = await Dev.find({
       techs: {
@@ -20,7 +20,7 @@ module.exports = {
             type: 'Point',
             coordinates: [longitude, latitude],
           },
-          $maxDistance: 30000,
+          $maxDistance: 15000,
         }
       }
     });
