@@ -11,10 +11,6 @@ export const Aside = styled.aside`
   flex-direction: column;
 
   @media (max-width: 1050px) {
-    width: 55%;
-  }
-
-  @media (max-width: 650px) {
     width: 100%;
   }
 
@@ -23,6 +19,33 @@ export const Aside = styled.aside`
     text-align: center;
     display: block;
     color: ${colors.darkGray};
+  }
+`;
+
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  h1 {
+    font-family: 'Dancing Script', cursive;
+    display: flex;
+    align-items: center;
+    color: ${colors.white};
+    justify-content: center;
+    font-size: 35px;
+    position: absolute;
+    top: -70px;
+    left: 20%;
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+  @media (max-width: 1050px) {
+    h1 {
+      left: 30%;
+    }
   }
 `;
 
