@@ -8,9 +8,11 @@ module.exports = {
 
     const techsArray = parseStringAsArray(techs);
 
+    const techsRegex = techsArray.map(tech => new RegExp(tech, 'i'));
+
     const devs = await Dev.find({
       techs: {
-        $in: techsArray,
+        $in: techsRegex,
       },
       location: {
         $near: {
@@ -18,10 +20,12 @@ module.exports = {
             type: 'Point',
             coordinates: [longitude, latitude],
           },
-          $maxDistance: 10000,
+          $maxDistance: 30000,
         }
       }
     });
+
+    console.log(devs);
 
     return res.json(devs);
   }
