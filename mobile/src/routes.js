@@ -1,6 +1,8 @@
+import React from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
+import Header from '~/components/Header';
 import Main from '~/pages/Main';
 import Profile from '~/pages/Profile';
 
@@ -10,13 +12,13 @@ const Routes = createAppContainer(
       Main: {
         screen: Main,
         navigationOptions: {
-          title: 'DevRadar',
+          header: () => <Header />,
         },
       },
       Profile: {
         screen: Profile,
         navigationOptions: {
-          title: 'Perfil no GitHub,',
+          title: 'Perfil no GitHub',
         },
       },
     },
