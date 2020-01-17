@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 import { MaterialIcons } from '@expo/vector-icons';
 
 import api from '~/services/api';
+import { connect, disconnect, subscriveToNewDevs } from '~/services/socket';
 
 import {
   Map,
@@ -55,6 +56,18 @@ export default function Main({ navigation }) {
     loadInitialPosition();
   }, []);
 
+  useEffect(() => {
+    subscriveToNewDevs(dev => setDevs([...devs, dev]));
+  }, [devs]);
+
+  const setupWebsocket = () => {
+    disconnect();
+
+    const { latitude, longitude } = currentRegion;
+
+    connect(latitude, longitude, techs);
+  };
+
   const loadDevs = async () => {
     const { latitude, longitude } = currentRegion;
 
@@ -70,6 +83,7 @@ export default function Main({ navigation }) {
       },
     });
 
+    setupWebsocket();
     return setDevs(data);
   };
 
