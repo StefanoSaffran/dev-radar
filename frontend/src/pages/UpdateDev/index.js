@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 
 import { toast } from 'react-toastify';
 import { MdKeyboardArrowLeft, MdDone } from 'react-icons/md';
+import { GiRadarSweep } from 'react-icons/gi';
 
 import Loading from '~/components/Loading';
 import api from '~/services/api';
@@ -24,7 +25,7 @@ export default function UpdateDev() {
         const { data } = await api.get(`/devs/${id}`);
 
         setName(data.name);
-        setTechs(data.techs);
+        setTechs(data.techs.join(', '));
         setLatitude(data.location.coordinates[1]);
         setLongitude(data.location.coordinates[0]);
       } catch (err) {
@@ -65,7 +66,11 @@ export default function UpdateDev() {
         <Loading type="spinner" />
       ) : (
         <>
-          <h1>Editando {name}</h1>
+          <h1>
+            <GiRadarSweep size={60} color="#fff" />
+            DevRadar
+          </h1>
+          <h2>Editando {name}</h2>
           <form onSubmit={handleSubmit}>
             <label htmlFor="techs">
               Tecnologias

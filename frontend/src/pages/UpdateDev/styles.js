@@ -7,8 +7,24 @@ export const Container = styled.div`
   box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.02);
   border-radius: 4px;
   background: ${colors.white};
+  position: relative;
 
   h1 {
+    font-family: 'Dancing Script', cursive;
+    display: flex;
+    align-items: center;
+    color: ${colors.white};
+    justify-content: center;
+    font-size: 35px;
+    position: absolute;
+    top: -70px;
+    left: 30%;
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+  h2 {
     text-align: center;
     color: ${colors.darkGray};
   }

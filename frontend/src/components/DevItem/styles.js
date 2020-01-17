@@ -7,6 +7,9 @@ export const Dev = styled.li`
   border-radius: 4px;
   background: #fff;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   header {
     display: flex;

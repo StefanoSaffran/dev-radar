@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   height: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 30px;
+  padding: 100px 30px;
 
   display: flex;
   flex-direction: row;

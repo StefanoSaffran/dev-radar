@@ -38,6 +38,9 @@ export const Form = styled.form`
   }
 
   button[type='submit'] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 0;
     margin-top: 30px;
     background: ${colors.submitButton};
@@ -47,6 +50,10 @@ export const Form = styled.form`
     font-weight: bold;
     color: ${colors.white};
     transition: background 0.5s;
+
+    svg {
+      margin-right: 10px;
+    }
 
     &:hover {
       background: ${darken(0.06, `${colors.submitButton}`)};

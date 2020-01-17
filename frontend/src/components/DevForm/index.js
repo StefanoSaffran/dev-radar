@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import { MdDone } from 'react-icons/md';
+
 import { Form } from './styles';
 
 export default function DevForm({ onSubmit }) {
@@ -81,7 +83,9 @@ export default function DevForm({ onSubmit }) {
           />
         </label>
       </div>
-      <button type="submit">Salvar</button>
+      <button type="submit">
+        <MdDone size={23} color="#fff" /> Salvar
+      </button>
     </Form>
   );
 }
