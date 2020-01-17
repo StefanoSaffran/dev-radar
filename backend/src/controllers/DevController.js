@@ -41,8 +41,9 @@ module.exports = {
   },
 
   async index(req, res) {
-    const devs = await Dev.find({});
-  
+    const { page = 1 } = req.query;
+    const devs = await Dev.paginate({}, {page, limit: 10, sort: {_id: 'desc'} })
+      
     return res.json(devs);
   },
 
