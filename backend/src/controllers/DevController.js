@@ -13,7 +13,7 @@ module.exports = {
       try {
         const { data } = await axios.get(`https://api.github.com/users/${github_username}`);
 
-        const { name = login, avatar_url, bio } = data;
+        const { name, login, avatar_url, bio } = data;
     
       const techsArray = parseStringAsArray(techs);
     
@@ -21,6 +21,10 @@ module.exports = {
         type: 'Point',
         coordinates: [longitude, latitude],
       };
+
+      if (!name) {
+        name = login
+      }
     
       dev = await Dev.create({
         github_username,

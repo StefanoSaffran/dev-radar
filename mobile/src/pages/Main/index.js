@@ -133,15 +133,17 @@ export default function Main({ navigation }) {
       <Search>
         <Input
           style={{
+            elevation: 2,
             shadowColor: '#000',
-            shadowOffset: { width: 4, height: 4 },
             shadowOpacity: 0.2,
-            elevation: 1,
+            shadowOffset: { width: 4, height: 4 },
           }}
           placeholder="*Buscar devs por techs..."
           placeholderTextColor="#999"
           autoCapitalize="words"
           autoCorrect={false}
+          returnKeyType="search"
+          onSubmitEditing={loadDevs}
           value={techs}
           onChangeText={setTechs}
         />
