@@ -1,3 +1,6 @@
+<p align="center">
+<img src="https://res.cloudinary.com/stefanosaffran/image/upload/v1581926877/Omnistack/mrszfh4anwk1bliyodox.png" width="400"/>
+</p>
 <h1 align="center">
     DevRadar Fullstack app
 </h1>
@@ -36,6 +39,16 @@ This project was developed with the following technologies:
 -  [Prettier](https://prettier.io/)
 -  [VS Code](https://code.visualstudio.com/)
 
+## :iphone: Images
+
+<p align="center">
+  <img src="https://res.cloudinary.com/stefanosaffran/image/upload/v1581926898/Omnistack/dzzzlnaxqlhnl98qehfo.png">
+</p>
+
 ## :mailbox_with_mail: Get in touch!
 
 [LinkedIn](https://www.linkedin.com/in/stefanosaffran/) | [Website](https://stefanosaffran.com)
+
+---
+
+Made with :coffee: and ♥ by Stefano Saffran.
