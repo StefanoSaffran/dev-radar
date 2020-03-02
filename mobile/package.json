@@ -30,7 +30,7 @@
     "react-native-web": "0.11.7",
     "react-native-webview": "7.4.3",
     "react-navigation": "4.0.10",
-    "react-navigation-stack": "2.0.15",
+    "react-navigation-stack": "2.2.2",
     "reactotron-react-native": "4.0.2",
     "socket.io-client": "2.3.0",
     "styled-components": "5.0.0"
