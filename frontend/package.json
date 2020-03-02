@@ -14,7 +14,7 @@
     "customize-cra": "0.9.1",
     "eslint-import-resolver-babel-plugin-root-import": "1.1.1",
     "history": "4.10.1",
-    "immer": "5.3.2",
+    "immer": "5.3.6",
     "polished": "3.4.2",
     "prop-types": "15.7.2",
     "react": "16.12.0",
