@@ -33,7 +33,7 @@
     "react-navigation-stack": "2.0.15",
     "reactotron-react-native": "4.0.2",
     "socket.io-client": "2.3.0",
-    "styled-components": "5.0.0"
+    "styled-components": "5.0.1"
   },
   "devDependencies": {
     "@babel/core": "7.8.3",
