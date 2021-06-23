@@ -11,7 +11,7 @@
   "dependencies": {
     "axios": "0.21.1",
     "babel-plugin-root-import": "6.4.1",
-    "customize-cra": "0.9.1",
+    "customize-cra": "1.0.0",
     "eslint-import-resolver-babel-plugin-root-import": "1.1.1",
     "history": "4.10.1",
     "immer": "8.0.4",
