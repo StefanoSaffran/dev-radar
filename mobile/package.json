@@ -29,8 +29,8 @@
     "react-native-vector-icons": "6.6.0",
     "react-native-web": "0.16.3",
     "react-native-webview": "11.0.0",
-    "react-navigation": "4.0.10",
-    "react-navigation-stack": "2.0.15",
+    "react-navigation": "4.4.4",
+    "react-navigation-stack": "2.10.4",
     "reactotron-react-native": "4.0.3",
     "socket.io-client": "2.3.0",
     "styled-components": "5.0.1"
