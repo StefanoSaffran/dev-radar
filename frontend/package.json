@@ -13,7 +13,7 @@
     "babel-plugin-root-import": "6.4.1",
     "customize-cra": "1.0.0",
     "eslint-import-resolver-babel-plugin-root-import": "1.1.1",
-    "history": "4.10.1",
+    "history": "5.0.0",
     "immer": "8.0.4",
     "polished": "3.7.2",
     "prop-types": "15.7.2",
