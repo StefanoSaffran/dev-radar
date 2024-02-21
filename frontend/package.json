@@ -9,7 +9,7 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "axios": "0.21.4",
+    "axios": "0.28.0",
     "babel-plugin-root-import": "6.6.0",
     "customize-cra": "1.0.0",
     "eslint-import-resolver-babel-plugin-root-import": "1.1.1",
